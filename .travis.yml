@@ -8,4 +8,6 @@ before_install:
 
 script:
   - make build-dev
-  - make test-dev
+    if: branch = master
+  - make build-prod TAG=tag
+    if: tag IS present

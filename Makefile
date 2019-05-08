@@ -8,3 +8,6 @@ build-base:
 
 build-dev:
 	docker build -t $(NAME):dev --rm dev ${NO_CACHE}
+
+build-prod:
+	docker build -t $(NAME):dev --build-arg=BAR --rm dev ${NO_CACHE}

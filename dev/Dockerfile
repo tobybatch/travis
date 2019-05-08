@@ -1,3 +1,4 @@
 FROM tobybatch/travis_base
 
-RUN echo "Foo">>/bar
+ARG TAG=BAR
+RUN echo "Foo ${TAG}">>/bar
