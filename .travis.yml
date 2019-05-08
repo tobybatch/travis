@@ -1,0 +1,11 @@
+language: ruby
+
+services:
+  - docker
+
+before_install:
+  - make build-base
+
+script:
+  - make build-dev
+  - make test-dev
